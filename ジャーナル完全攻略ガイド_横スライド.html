@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1440">
+<title>ジャーナル完全攻略ガイド — 横スライド版</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+@page{size:1440px 810px;margin:0;background:#07071a;}
+html,body{background:#07071a;}
+body{font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Yu Gothic UI','Noto Sans JP',sans-serif;color:#c4c4de;}
+.s{width:1440px;height:810px;position:relative;overflow:hidden;background:#07071a;page-break-after:always;break-after:page;display:flex;flex-direction:column;}
+.s::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent 5%,#6d28d9 30%,#c084fc 50%,#6d28d9 70%,transparent 95%);opacity:.7;}
+.sf{position:absolute;bottom:0;left:0;right:0;height:52px;padding:0 80px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(147,51,234,.12);}
+.sf-title{font-size:13px;color:#3a2a5a;letter-spacing:2px;}
+.sf-page{font-size:13px;color:#3a2a5a;}
+.sc{flex:1;padding:52px 120px 64px;display:flex;flex-direction:column;justify-content:center;}
+.glow{position:absolute;border-radius:50%;pointer-events:none;}
+.glow-tl{top:-150px;left:-100px;width:600px;height:600px;background:radial-gradient(ellipse,rgba(120,40,220,.10),transparent 70%);}
+.glow-tr{top:-150px;right:-100px;width:600px;height:600px;background:radial-gradient(ellipse,rgba(120,40,220,.08),transparent 70%);}
+.glow-c{top:50%;left:50%;transform:translate(-50%,-50%);width:1000px;height:700px;background:radial-gradient(ellipse,rgba(100,30,200,.09),transparent 70%);}
+.cx{position:absolute;width:30px;height:30px;}
+.cx::before,.cx::after{content:'';position:absolute;background:rgba(147,51,234,.45);}
+.cx::before{width:2px;height:24px;top:0;left:0;}
+.cx::after{width:24px;height:2px;top:0;left:0;}
+.cx-tl{top:24px;left:24px;}
+.cx-tr{top:24px;right:24px;transform:scaleX(-1);}
+.cx-bl{bottom:24px;left:24px;transform:scaleY(-1);}
+.cx-br{bottom:24px;right:24px;transform:scale(-1);}
+.t-stage{font-size:12px;letter-spacing:5px;color:#7c3aed;font-weight:700;display:flex;align-items:center;gap:14px;margin-bottom:20px;}
+.t-stage::before{content:'';width:28px;height:1px;background:#7c3aed;flex-shrink:0;}
+.t-h1{font-size:68px;font-weight:900;line-height:1.25;letter-spacing:4px;background:linear-gradient(130deg,#d8b4fe 0%,#f0abfc 40%,#fff 80%,#d8b4fe 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:16px;}
+.t-h2{font-size:52px;font-weight:800;color:#e2d4ff;line-height:1.3;letter-spacing:2px;margin-bottom:28px;}
+.t-h3{font-size:40px;font-weight:700;color:#fcd34d;line-height:1.4;letter-spacing:1px;margin-bottom:20px;}
+.t-body{font-size:30px;color:#c4c4de;line-height:1.8;letter-spacing:.5px;}
+.t-body-md{font-size:26px;color:#b0a0d0;line-height:1.8;}
+.t-body-sm{font-size:22px;color:#9080b0;line-height:1.75;}
+.t-large{font-size:44px;font-weight:700;color:#e2d4ff;line-height:1.5;}
+.hl{color:#fde68a;font-weight:700;}
+.hl2{color:#f0abfc;}
+.hl3{color:#c084fc;}
+.quote{background:linear-gradient(90deg,rgba(109,40,217,.18),rgba(109,40,217,.04));border-left:4px solid #7c3aed;border-radius:0 10px 10px 0;padding:24px 40px;color:#d0bfff;line-height:1.8;}
+.abox{background:linear-gradient(135deg,rgba(120,50,240,.15),rgba(80,20,160,.07));border:1px solid rgba(147,51,234,.35);border-radius:12px;padding:32px 52px;position:relative;}
+.abox::before{content:'';position:absolute;inset:4px;border:1px solid rgba(147,51,234,.10);border-radius:9px;pointer-events:none;}
+.blist{list-style:none;display:flex;flex-direction:column;gap:16px;}
+.blist li{font-size:28px;color:#c4c4de;line-height:1.55;display:flex;align-items:flex-start;gap:16px;}
+.blist li::before{content:'▶';color:#9333ea;font-size:16px;margin-top:7px;flex-shrink:0;}
+.blist.sm li{font-size:24px;}
+.nlist{list-style:none;display:flex;flex-direction:column;gap:14px;}
+.nlist li{font-size:26px;color:#c4c4de;line-height:1.55;display:flex;align-items:flex-start;gap:20px;}
+.nn{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#6d28d9,#9333ea);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;color:#fff;flex-shrink:0;margin-top:2px;}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:48px;}
+.col-box{background:rgba(120,50,240,.07);border:1px solid rgba(147,51,234,.18);border-radius:12px;padding:32px 36px;}
+.col-box-label{font-size:13px;letter-spacing:3px;color:#7c3aed;margin-bottom:14px;font-weight:600;}
+.ghost-num{position:absolute;font-size:220px;font-weight:900;color:rgba(147,51,234,.05);right:60px;top:50%;transform:translateY(-50%);line-height:1;pointer-events:none;letter-spacing:-12px;}
+.hdiv{height:1px;background:linear-gradient(90deg,transparent,rgba(147,51,234,.4),transparent);margin:18px 0;}
+.rline{height:1px;background:linear-gradient(90deg,transparent,rgba(147,51,234,.6),rgba(192,132,252,.8),rgba(147,51,234,.6),transparent);margin:14px 0;}
+.step-r{display:flex;align-items:flex-start;gap:28px;padding:16px 0;border-bottom:1px solid rgba(147,51,234,.10);}
+.step-r:last-child{border-bottom:none;}
+.step-n{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#6d28d9,#9333ea);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;color:#fff;flex-shrink:0;}
+.step-c{flex:1;}
+.step-t{font-size:26px;font-weight:700;color:#e2d4ff;margin-bottom:6px;}
+.step-d{font-size:22px;color:#9080b0;line-height:1.6;}
+.badge-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:16px;}
+.badge{background:rgba(120,50,240,.15);border:1px solid rgba(147,51,234,.4);border-radius:6px;padding:8px 20px;font-size:22px;color:#c084fc;font-weight:600;}
+.s-chapter{background:linear-gradient(135deg,#07071a,#0d0d2a,#07071a);}
+.s-cover .sc{align-items:center;text-align:center;padding:40px 200px 64px;}
+.fq-text{font-size:46px;font-weight:700;color:#e2d4ff;line-height:1.65;letter-spacing:1px;max-width:1100px;}
+</style>
+</head>
+<body>
+
+<!-- ===== 1. COVER ===== -->
+<div class="s s-cover">
+  <div class="glow glow-c"></div>
+  <div class="cx cx-tl"></div><div class="cx cx-tr"></div><div class="cx cx-bl"></div><div class="cx cx-br"></div>
+  <div class="sc">
+    <div class="t-stage" style="justify-content:center;">SPECIAL BONUS GUIDE</div>
+    <div class="rline" style="width:400px;margin:0 auto 32px;"></div>
+    <h1 class="t-h1" style="font-size:76px;letter-spacing:8px;">ジャーナル<br>完全攻略ガイド</h1>
+    <p class="t-body-md" style="margin-bottom:32px;color:#6040a0;letter-spacing:3px;">〜 人生というゲームを制する、最強の「思考OS」〜</p>
+    <div class="rline" style="width:280px;margin:0 auto 36px;"></div>
+    <div class="abox" style="padding:24px 48px;text-align:center;">
+      <p style="font-size:28px;font-weight:700;color:#fde68a;line-height:1.7;letter-spacing:1px;">毎日10分書くだけで、<br><span class="hl2">思考が変わり、人生が動き出す。</span></p>
+    </div>
+    <p style="font-size:16px;color:#5040a0;letter-spacing:3px;margin-top:24px;">くすぶりを感じているすべての会社員へ</p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">1</span></div>
+</div>
+
+<!-- ===== 2. はじめに ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">はじめに</div>
+    <h2 class="t-h2">あなたの人生、今<br>うまく前に進んでいるか？</h2>
+    <p class="t-body" style="color:#9080b0;">正直に答えてほしい。</p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">2</span></div>
+</div>
+
+<!-- ===== 3. 3つの悩み ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">はじめに</div>
+    <div class="quote" style="font-size:30px;display:flex;flex-direction:column;gap:20px;">
+      <p>「毎日頑張っているのに、なんか前に進んでいる気がしない」</p>
+      <p>「モヤモヤはあるけど、何が問題かわからない」</p>
+      <p>「このままでいいのか、と感じながらも変えられない」</p>
+    </div>
+    <p class="t-body" style="margin-top:36px;">ひとつでも当てはまるなら、<span class="hl">この資料はあなたのために作った。</span></p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">3</span></div>
+</div>
+
+<!-- ===== 4. 人生はゲーム ===== -->
+<div class="s">
+  <div class="glow glow-c"></div>
+  <div class="sc" style="align-items:center;text-align:center;">
+    <p class="fq-text">人生はゲームだ。<br>だが多くの人は<br><span class="hl">ルールブックも攻略本も持たないまま</span>、<br>ただ走り続けている。</p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">4</span></div>
+</div>
+
+<!-- ===== 5. 攻略本 ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">はじめに</div>
+    <h2 class="t-h2">その「攻略本」の役割を果たすのが</h2>
+    <div class="abox" style="text-align:center;padding:36px 60px;">
+      <p style="font-size:52px;font-weight:900;background:linear-gradient(130deg,#d8b4fe,#f0abfc,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:4px;">ジャーナル（書く習慣）</p>
+    </div>
+    <p class="t-body" style="margin-top:32px;">難しいことは何もない。<br><span class="hl">ノートとペン、それだけだ。</span></p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">5</span></div>
+</div>
+
+<!-- ===== 6. STAGE 1 OPENER ===== -->
+<div class="s s-chapter">
+  <div class="glow glow-c"></div>
+  <div class="cx cx-tl"></div><div class="cx cx-tr"></div><div class="cx cx-bl"></div><div class="cx cx-br"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 1</div>
+    <h1 class="t-h1">ジャーナルとは何か？</h1>
+    <p class="t-body-md">「書く瞑想」という最強の武器</p>
+  </div>
+  <div class="ghost-num">1</div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">6</span></div>
+</div>
+
+<!-- ===== 7. ジャーナリングとは ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 1</div>
+    <h2 class="t-h2">ジャーナリングとは？</h2>
+    <div class="abox" style="margin-bottom:28px;">
+      <p style="font-size:32px;font-weight:700;color:#e2d4ff;line-height:1.7;">頭の中にある<span class="hl">感情・思考・欲求</span>を<br>そのまま紙に書き出す行為</p>
+    </div>
+    <p class="t-body-md">日記とは違う。<br>きれいにまとめる必要はない。正しい文章も、論理的な構成も不要だ。</p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">7</span></div>
+</div>
+
+<!-- ===== 8. 書く瞑想 ===== -->
+<div class="s">
+  <div class="glow glow-c"></div>
+  <div class="sc" style="align-items:center;text-align:center;">
+    <p class="fq-text"><span class="hl3">「脳の中にあるものを、外に出す」</span><br><br>——それだけでいい。<br><br>これを<span class="hl">「書く瞑想」</span>と呼ぶ。</p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">8</span></div>
+</div>
+
+<!-- ===== 9. 脳科学の根拠 ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 1</div>
+    <h2 class="t-h2">なぜ「書く」だけで<br>人生が変わるのか？</h2>
+    <p class="t-body" style="margin-bottom:28px;">「気持ちを書いたくらいで変わらない」——そう思っているなら、読み進めろ。</p>
+    <div class="abox">
+      <p style="font-size:28px;font-weight:700;color:#fde68a;">これは根性論でも精神論でもない。<br><span class="hl2">脳科学と心理学が証明した事実だ。</span></p>
+    </div>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">9</span></div>
+</div>
+
+<!-- ===== 10. 根拠1 RAS ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 1 ▶ 根拠1</div>
+    <h2 class="t-h2">RAS（網様体賦活系）<br>という情報フィルター</h2>
+    <p class="t-body">脳には膨大な情報を選別する「RAS」というフィルターが存在する。<br><span class="hl">「重要」とマークした情報は、自動的に拾い始める。</span></p>
+    <div class="hdiv"></div>
+    <p class="t-body-md">ジャーナルに目標を書く＝<span class="hl3">脳に「これを検索し続けろ」というオーダー</span><br>→ 見えなかったチャンスが突然「見え始める」</p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">10</span></div>
+</div>
+
+<!-- ===== 11. 根拠2 スコトーマ ===== -->
+<div class="s">
+  <div class="glow glow-tr"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 1 ▶ 根拠2</div>
+    <h2 class="t-h2">スコトーマ（心理的盲点）<br>を外す</h2>
+    <p class="t-body">あなたの鼻は、常に視界の下部に映っている。でも普段は意識されない。<br>脳が「不要」と判定し、<span class="hl">見えているのに見えない状態</span>にしているのだ。</p>
+    <div class="hdiv"></div>
+    <p class="t-body-md">書くことで意識が向き、スコトーマが外れる。<br><span class="hl3">目の前にあったのに見えていなかった答えが、突然姿を現す。</span></p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">11</span></div>
+</div>
+
+<!-- ===== 12. 根拠3 扁桃体 ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 1 ▶ 根拠3</div>
+    <h2 class="t-h2">扁桃体が鎮まり、<br>前頭前野が覚醒する</h2>
+    <div class="cols">
+      <div class="col-box">
+        <p class="col-box-label">BEFORE — 感情支配</p>
+        <p style="font-size:26px;color:#9080b0;line-height:1.7;">「怒り」「不安」「焦り」<br>→ 扁桃体が暴走<br>→ 判断力が落ちる</p>
+      </div>
+      <div class="col-box" style="border-color:rgba(147,51,234,.4);">
+        <p class="col-box-label">AFTER — 書いた後</p>
+        <p style="font-size:26px;color:#c084fc;line-height:1.7;">感情を言語化<br>→ 扁桃体が鎮まる<br>→ <span class="hl">前頭前野が活性化</span></p>
+      </div>
+    </div>
+    <p class="t-body-sm" style="margin-top:20px;">さらに感謝・理想を書く時、<span class="hl">セロトニン・ドーパミン・オキシトシン</span>が分泌される。書くだけで、化学的に気分が上がる。</p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">12</span></div>
+</div>
+
+<!-- ===== 13. 根拠4 ペネベイカー ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 1 ▶ 根拠4</div>
+    <h2 class="t-h2">ペネベイカー教授の実験<br>——30年で証明された効果</h2>
+    <p class="t-body-md" style="margin-bottom:24px;">テキサス大学の社会心理学者が30年以上研究。感情的な出来事を20分×3日書いたグループに：</p>
+    <div class="badge-row">
+      <div class="badge">✓ 血圧の低下</div>
+      <div class="badge">✓ 免疫機能の向上</div>
+      <div class="badge">✓ 通院回数の減少</div>
+      <div class="badge">✓ 主観的幸福感の持続</div>
+    </div>
+    <p class="t-body-sm" style="margin-top:24px;"><span class="hl">「書く」行為が、メンタルだけでなく身体的な健康にまで影響を与える</span>ことが証明されている。</p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">13</span></div>
+</div>
+
+<!-- ===== 14. 根拠5 ツァイガルニク ===== -->
+<div class="s">
+  <div class="glow glow-tr"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 1 ▶ 根拠5</div>
+    <h2 class="t-h2">ツァイガルニク効果<br>——「頭に残る未完了」を解放する</h2>
+    <p class="t-body" style="margin-bottom:24px;">未完了のタスクや気がかりなことは記憶に残り続ける。<br>「あれもやらなきゃ」——これがエネルギーを奪い、集中を妨げている。</p>
+    <div class="abox">
+      <p style="font-size:28px;font-weight:700;color:#fde68a;line-height:1.7;">ノートに書き出すと、脳は<br>「外部に保存された」と認識し、頭から解放する。<br><span class="hl2">→ 約9分早く入眠できる研究結果あり</span></p>
+    </div>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">14</span></div>
+</div>
+
+<!-- ===== 15. STAGE1まとめ ===== -->
+<div class="s">
+  <div class="glow glow-c"></div>
+  <div class="sc" style="align-items:center;text-align:center;">
+    <div class="t-stage" style="justify-content:center;">STAGE 1 まとめ</div>
+    <p class="fq-text"><span class="hl">ジャーナルは<br>「脳のOSアップデート」だ。</span><br><br><span style="font-size:32px;color:#9080b0;font-weight:400;">新しいソフトを入れるより、<br>OSを更新した方が全部速くなる。</span></p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">15</span></div>
+</div>
+
+<!-- ===== 16. STAGE 2 OPENER ===== -->
+<div class="s s-chapter">
+  <div class="glow glow-c"></div>
+  <div class="cx cx-tl"></div><div class="cx cx-tr"></div><div class="cx cx-bl"></div><div class="cx cx-br"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 2</div>
+    <h1 class="t-h1">世界の成功者はなぜ<br>全員「書いている」のか</h1>
+  </div>
+  <div class="ghost-num">2</div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">16</span></div>
+</div>
+
+<!-- ===== 17. 成功者① ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 2</div>
+    <div class="cols">
+      <div class="col-box">
+        <p class="col-box-label">RICHARD BRANSON</p>
+        <p style="font-size:26px;font-weight:700;color:#e2d4ff;margin-bottom:12px;">ヴァージングループ創業者</p>
+        <p style="font-size:22px;color:#9080b0;line-height:1.7;">「ノートを持ち歩かない日はない」。ヴァージングループの事業の多くはそのノートから生まれた。</p>
+      </div>
+      <div class="col-box">
+        <p class="col-box-label">OPRAH WINFREY</p>
+        <p style="font-size:26px;font-weight:700;color:#e2d4ff;margin-bottom:12px;">メディア実業家</p>
+        <p style="font-size:22px;color:#9080b0;line-height:1.7;">「感謝ジャーナル」を30年以上継続。毎晩5つの感謝を書くことがポジティブマインドの基盤だと公言。</p>
+      </div>
+    </div>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">17</span></div>
+</div>
+
+<!-- ===== 18. 成功者② ===== -->
+<div class="s">
+  <div class="glow glow-tr"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 2</div>
+    <div class="cols">
+      <div class="col-box">
+        <p class="col-box-label">孫 正義</p>
+        <p style="font-size:26px;font-weight:700;color:#e2d4ff;margin-bottom:12px;">ソフトバンクグループ創業者</p>
+        <p style="font-size:22px;color:#9080b0;line-height:1.7;">若い頃から毎日の目標・計画をノートに記録。思考の整理と将来のビジョン明確化に活用してきた。</p>
+      </div>
+      <div class="col-box">
+        <p class="col-box-label">SAM ALTMAN</p>
+        <p style="font-size:26px;font-weight:700;color:#e2d4ff;margin-bottom:12px;">OpenAI CEO</p>
+        <p style="font-size:22px;color:#9080b0;line-height:1.7;">世界最高レベルのAIを作った人物でさえ、<span class="hl3">深い思考には紙を使う</span>と明言している。</p>
+      </div>
+    </div>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">18</span></div>
+</div>
+
+<!-- ===== 19. 共通点 ===== -->
+<div class="s">
+  <div class="glow glow-c"></div>
+  <div class="sc" style="align-items:center;text-align:center;">
+    <div class="t-stage" style="justify-content:center;">STAGE 2 共通点</div>
+    <p class="fq-text">彼らは「才能があったから成功した」のではない。<br><br><span class="hl">「書く習慣」を通じて思考を整理し、<br>方向を定め、行動し続けたから成功した。</span></p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">19</span></div>
+</div>
+
+<!-- ===== 20. STAGE 3 OPENER ===== -->
+<div class="s s-chapter">
+  <div class="glow glow-c"></div>
+  <div class="cx cx-tl"></div><div class="cx cx-tr"></div><div class="cx cx-bl"></div><div class="cx cx-br"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 3</div>
+    <h1 class="t-h1">あなたに「詰まり」が<br>生まれる本当の理由</h1>
+  </div>
+  <div class="ghost-num">3</div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">20</span></div>
+</div>
+
+<!-- ===== 21. 詰まりの2つの理由 ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 3</div>
+    <h2 class="t-h2">前に進めない理由は<br>だいたい2つに絞られる</h2>
+    <ul class="nlist">
+      <li><div class="nn">1</div><div><span class="hl">やり方を知らない</span><br><span class="t-body-sm">知識・スキルの不足</span></div></li>
+      <li><div class="nn">2</div><div><span class="hl">どこへ向かうべきかわかっていない</span><br><span class="t-body-sm">方向性の欠如 — ジャーナルが解決するのは主にこちら</span></div></li>
+    </ul>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">21</span></div>
+</div>
+
+<!-- ===== 22. 他責思考 ===== -->
+<div class="s">
+  <div class="glow glow-tr"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 3</div>
+    <h3 class="t-h3">他責という「癖」を手放せ</h3>
+    <div class="quote" style="margin-bottom:24px;font-size:26px;">
+      <p>「あの上司のせいでやる気が出ない」</p>
+      <p>「環境が悪いから結果が出ない」</p>
+      <p>「もう少し条件が整ったら動く」</p>
+    </div>
+    <p class="t-body-md">他責思考の本質は「<span class="hl2">自分の願望が不明確なまま、他人の価値観に操作されている状態</span>」だ。<br>コントローラーを他人に渡したまま、自分の方向に進まないと嘆いているようなものだ。</p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">22</span></div>
+</div>
+
+<!-- ===== 23. 自責スイッチ ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 3</div>
+    <h3 class="t-h3">自責という「思考スイッチ」を入れる</h3>
+    <p class="t-body" style="margin-bottom:28px;"><span class="hl">自責とは、自分を責めることではない。</span><br>「自分が選択の主体である」と認識することだ。</p>
+    <div class="abox">
+      <p style="font-size:30px;font-weight:700;color:#e2d4ff;line-height:1.7;">「なぜうまくいかないのか」<br>→ <span class="hl">「どうすれば変えられるか」</span></p>
+    </div>
+    <p class="t-body-sm" style="margin-top:20px;">この思考の転換こそが、人生を変える最初のステップ。<br>ジャーナルは、この切り替えを毎日ONにし続けるツールだ。</p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">23</span></div>
+</div>
+
+<!-- ===== 24. STAGE 4 OPENER ===== -->
+<div class="s s-chapter">
+  <div class="glow glow-c"></div>
+  <div class="cx cx-tl"></div><div class="cx cx-tr"></div><div class="cx cx-bl"></div><div class="cx cx-br"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 4</div>
+    <h1 class="t-h1">ジャーナルで<br>手に入る未来</h1>
+  </div>
+  <div class="ghost-num">4</div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">24</span></div>
+</div>
+
+<!-- ===== 25. 3ヶ月後 ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 4</div>
+    <h2 class="t-h2" style="color:#c084fc;">3ヶ月後のあなた</h2>
+    <p class="t-body" style="margin-bottom:20px;">朝、コーヒーを淹れながらノートを開く。<br>もうそれが習慣になっていて、書かないと逆に気持ち悪い。</p>
+    <p class="t-body" style="margin-bottom:20px;">ページには昨日の自分の本音、今日やるべき一手、理想の未来が並んでいる。</p>
+    <div class="abox">
+      <p style="font-size:28px;font-weight:700;color:#fde68a;">職場で「なんかあいつ最近違うな」<br>と思われ始めている。</p>
+    </div>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">25</span></div>
+</div>
+
+<!-- ===== 26. 6ヶ月後 ===== -->
+<div class="s">
+  <div class="glow glow-tr"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 4</div>
+    <h2 class="t-h2" style="color:#a78bfa;">6ヶ月後のあなた</h2>
+    <ul class="blist" style="gap:20px;">
+      <li>副業の最初の売上が立ち上がっている</li>
+      <li>筋トレも継続できている。<span class="hl">なぜなら「なぜやるか」が言語化されているから</span></li>
+      <li>見た目が変わると態度が変わり、周囲の扱われ方が変わっていく</li>
+      <li>「なんか充実してそう」と言われる側になっている</li>
+    </ul>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">26</span></div>
+</div>
+
+<!-- ===== 27. 1年後 ===== -->
+<div class="s">
+  <div class="glow glow-c"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 4</div>
+    <h2 class="t-h2" style="color:#fde68a;">1年後のあなた</h2>
+    <p class="t-body" style="margin-bottom:24px;">自分の価値観が明確になっている。<br>何に時間を使い、何を断るべきかが迷わずわかる。<br><span class="hl">収入・体・人間関係——3つが同時に動き始めている。</span></p>
+    <div class="abox">
+      <p style="font-size:28px;color:#e2d4ff;line-height:1.7;">「あの時ノートを開いた一行が、<br>ここにつながっていたのか」</p>
+    </div>
+    <p class="t-body-sm" style="margin-top:20px;">これは理想論ではない。ジャーナルを実践した人間が共通して辿る「変化のパターン」だ。</p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">27</span></div>
+</div>
+
+<!-- ===== 28. STAGE 5 OPENER ===== -->
+<div class="s s-chapter">
+  <div class="glow glow-c"></div>
+  <div class="cx cx-tl"></div><div class="cx cx-tr"></div><div class="cx cx-bl"></div><div class="cx cx-br"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 5</div>
+    <h1 class="t-h1">願望を「本物」にする<br>3つのレイヤー</h1>
+  </div>
+  <div class="ghost-num">5</div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">28</span></div>
+</div>
+
+<!-- ===== 29. 3レイヤー概要 ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 5</div>
+    <h2 class="t-h2">ただ「こうなりたい」と<br>書くだけでは弱い</h2>
+    <p class="t-body" style="margin-bottom:28px;">成功者が持つ願望には、<span class="hl">3つの層</span>が重なっている。<br>この3つがバラバラだと、どんなに「頑張ろう」と思っても3日で止まる。</p>
+    <div class="badge-row">
+      <div class="badge">レイヤー1｜価値観（信念）</div>
+      <div class="badge">レイヤー2｜目的（理由）</div>
+      <div class="badge">レイヤー3｜ビジョン（理想）</div>
+    </div>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">29</span></div>
+</div>
+
+<!-- ===== 30. レイヤー1 ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 5 ▶ レイヤー1</div>
+    <h3 class="t-h3">価値観（信念）</h3>
+    <p style="font-size:28px;color:#b0a0d0;margin-bottom:28px;">自分は何を大切にして生きたいか？</p>
+    <div class="badge-row">
+      <div class="badge">自由</div>
+      <div class="badge">家族</div>
+      <div class="badge">挑戦</div>
+      <div class="badge">誠実さ</div>
+      <div class="badge">影響力</div>
+    </div>
+    <p class="t-body-sm" style="margin-top:28px;">これが<span class="hl">行動の根っこ</span>になる。価値観が明確な人は、迷わない。</p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">30</span></div>
+</div>
+
+<!-- ===== 31. レイヤー2 ===== -->
+<div class="s">
+  <div class="glow glow-tr"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 5 ▶ レイヤー2</div>
+    <h3 class="t-h3">目的（理由）</h3>
+    <p style="font-size:28px;color:#b0a0d0;margin-bottom:28px;">なぜそれを成し遂げたいのか？</p>
+    <div class="quote" style="font-size:28px;line-height:1.9;">
+      <p>親に楽をさせたい</p>
+      <p>子どもに背中を見せたい</p>
+      <p>自分を証明したい</p>
+    </div>
+    <p class="t-body-sm" style="margin-top:24px;">「なぜ」が深いほど、<span class="hl">目先の「楽さ」や「怖さ」に負けない行動力</span>が生まれる。</p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">31</span></div>
+</div>
+
+<!-- ===== 32. レイヤー3 ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 5 ▶ レイヤー3</div>
+    <h3 class="t-h3">ビジョン（理想の状態）</h3>
+    <p style="font-size:28px;color:#b0a0d0;margin-bottom:28px;">具体的にどんな状態になっていたいか？</p>
+    <div class="quote" style="font-size:26px;line-height:1.9;">
+      <p>朝、好きな時間に起きて、好きな仕事をしている</p>
+      <p>副業の月収が30万を超え、家族に喜ばれている</p>
+      <p>体重75kg・体脂肪10%</p>
+    </div>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">32</span></div>
+</div>
+
+<!-- ===== 33. 3レイヤーまとめ ===== -->
+<div class="s">
+  <div class="glow glow-c"></div>
+  <div class="sc" style="align-items:center;text-align:center;">
+    <div class="t-stage" style="justify-content:center;">STAGE 5 まとめ</div>
+    <p class="fq-text">3つが重なった時、<br><span class="hl">ブレない行動力が生まれる。</span><br><br><span style="font-size:28px;color:#9080b0;font-weight:400;">ジャーナルは、この3レイヤーを<br>日々確認・更新する場だ。</span></p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">33</span></div>
+</div>
+
+<!-- ===== 34. STAGE 6 OPENER ===== -->
+<div class="s s-chapter">
+  <div class="glow glow-c"></div>
+  <div class="cx cx-tl"></div><div class="cx cx-tr"></div><div class="cx cx-bl"></div><div class="cx cx-br"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 6</div>
+    <h1 class="t-h1">実践マニュアル</h1>
+    <p class="t-body-md">今日から使える「最強フォーマット」</p>
+  </div>
+  <div class="ghost-num">6</div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">34</span></div>
+</div>
+
+<!-- ===== 35. 用意するもの ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 6</div>
+    <h2 class="t-h2">用意するもの</h2>
+    <ul class="blist" style="gap:24px;">
+      <li style="font-size:32px;"><span class="hl">100円のノート</span>（最初はそれで十分）</li>
+      <li style="font-size:32px;"><span class="hl">ペン</span></li>
+      <li style="font-size:32px;"><span class="hl">お気に入りの飲み物</span></li>
+    </ul>
+    <div class="abox" style="margin-top:32px;">
+      <p style="font-size:28px;font-weight:700;color:#f0abfc;">スマホのメモは使わない。<br>理由は後述する。</p>
+    </div>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">35</span></div>
+</div>
+
+<!-- ===== 36. LEVEL 1 朝ルーティン ===== -->
+<div class="s">
+  <div class="glow glow-tr"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 6 ▶ LEVEL 1</div>
+    <h2 class="t-h2">朝10分の「セットアップ」ルーティン</h2>
+    <p class="t-body" style="margin-bottom:28px;">1日を始める前に、思考と感情をセットアップする時間だ。</p>
+    <div class="step-r"><div class="step-n">1</div><div class="step-c"><div class="step-t">感情のデトックス（3分）</div><div class="step-d">今この瞬間の気持ちを、正直に書き出す</div></div></div>
+    <div class="step-r"><div class="step-n">2</div><div class="step-c"><div class="step-t">昨日の自分を承認する（2分）</div><div class="step-d">小さなことも含めて書き出す</div></div></div>
+    <div class="step-r"><div class="step-n">3</div><div class="step-c"><div class="step-t">理想の未来を「現在進行形」で書く（5分）</div><div class="step-d">すでにそうなっているかのように書く</div></div></div>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">36</span></div>
+</div>
+
+<!-- ===== 37. STEP1 感情デトックス ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 6 ▶ LEVEL 1 ▶ STEP 1</div>
+    <h3 class="t-h3">感情のデトックス（3分）</h3>
+    <p class="t-body" style="margin-bottom:24px;">今この瞬間の気持ちを、正直に書き出す。</p>
+    <div class="quote" style="font-size:26px;margin-bottom:24px;">
+      「なんかだるい」「ムカつく」「不安で仕方ない」「やる気ゼロ」
+    </div>
+    <div class="abox">
+      <p style="font-size:28px;font-weight:700;color:#fde68a;">ネガティブな本音こそ、隠さず書け。<br><span class="hl2" style="font-size:24px;">感情を言語化するだけで、扁桃体の活動が鎮まることが科学的に証明されている。</span></p>
+    </div>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">37</span></div>
+</div>
+
+<!-- ===== 38. STEP2 自己承認 ===== -->
+<div class="s">
+  <div class="glow glow-tr"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 6 ▶ LEVEL 1 ▶ STEP 2</div>
+    <h3 class="t-h3">昨日の自分を承認する（2分）</h3>
+    <p class="t-body" style="margin-bottom:24px;">昨日やったことを、小さなことも含めて書き出す。</p>
+    <div class="quote" style="font-size:26px;margin-bottom:24px;">
+      「洗濯した」「いつもより早く起きた」「水を2L飲めた」「少しだけ本を読んだ」
+    </div>
+    <p class="t-body-md">完璧でなくていい。<br>これが<span class="hl">「自信の積み立て貯金」</span>になる。<br>日々の小さな承認が、やがて揺るぎない自己肯定感になる。</p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">38</span></div>
+</div>
+
+<!-- ===== 39. STEP3 理想の未来 ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 6 ▶ LEVEL 1 ▶ STEP 3</div>
+    <h3 class="t-h3">理想の未来を「現在進行形」で書く（5分）</h3>
+    <p class="t-body" style="margin-bottom:24px;">「なりたい自分」を、<span class="hl">すでにそうなっているかのように</span>書く。</p>
+    <div class="quote" style="font-size:24px;line-height:1.9;">
+      <p>「俺は毎朝5時に起き、筋トレと読書で1日をスタートしている」</p>
+      <p>「副業の月収が30万を超え、妻に喜ばれている」</p>
+    </div>
+    <p class="t-body-sm" style="margin-top:20px;">きれいに書こうとしなくていい。これは「見栄えの作業」ではなく<span class="hl3">「思考のピントを合わせる作業」</span>だ。</p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">39</span></div>
+</div>
+
+<!-- ===== 40. LEVEL 2 夜ルーティン ===== -->
+<div class="s">
+  <div class="glow glow-tr"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 6 ▶ LEVEL 2</div>
+    <h2 class="t-h2">夜5分の「締めくくり」ルーティン</h2>
+    <p class="t-body" style="margin-bottom:28px;">朝が「1日のセットアップ」なら、夜は「1日のリセット」だ。</p>
+    <div class="step-r"><div class="step-n">1</div><div class="step-c"><div class="step-t">今日の「勝ち」を記録する（2分）</div><div class="step-d">今日うまくいったことを1〜3つ書く</div></div></div>
+    <div class="step-r"><div class="step-n">2</div><div class="step-c"><div class="step-t">明日の「最優先タスク」を1つ書く（2分）</div><div class="step-d">頭から降ろして、脳をリリースする</div></div></div>
+    <div class="step-r"><div class="step-n">3</div><div class="step-c"><div class="step-t">今日の「感謝」を1つ書く（1分）</div><div class="step-d">どんな小さなことでもいい</div></div></div>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">40</span></div>
+</div>
+
+<!-- ===== 41. 夜STEP1 今日の勝ち ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 6 ▶ LEVEL 2 ▶ STEP 1</div>
+    <h3 class="t-h3">今日の「勝ち」を記録する（2分）</h3>
+    <div class="quote" style="font-size:26px;margin-bottom:24px;">
+      <p>「昼休みに15分だけ副業のリサーチができた」</p>
+      <p>「上司に反論できた」「プロテインを飲み忘れなかった」</p>
+    </div>
+    <div class="abox">
+      <p style="font-size:28px;font-weight:700;color:#fde68a;">どんなに小さくていい。<br>「今日も前進した」という感覚の積み上げが、<br>長期的な自己効力感を作る。</p>
+    </div>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">41</span></div>
+</div>
+
+<!-- ===== 42. 夜STEP2 最優先タスク ===== -->
+<div class="s">
+  <div class="glow glow-tr"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 6 ▶ LEVEL 2 ▶ STEP 2</div>
+    <h3 class="t-h3">明日の「最優先タスク」を1つ書く（2分）</h3>
+    <p class="t-body" style="margin-bottom:24px;">明日やるべきことを<span class="hl">1つだけ</span>書いて、頭から降ろす。</p>
+    <div class="quote" style="margin-bottom:24px;font-size:28px;">
+      「明日は企画書の第一章を30分で書く」
+    </div>
+    <p class="t-body-md">ツァイガルニク効果により、未完了タスクは眠っている間も脳を占領し続ける。<br>紙に書き出すことで「外部に保存済み」と認識され、<span class="hl">約9分早く眠れる。</span></p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">42</span></div>
+</div>
+
+<!-- ===== 43. 夜STEP3 感謝 ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 6 ▶ LEVEL 2 ▶ STEP 3</div>
+    <h3 class="t-h3">今日の「感謝」を1つ書く（1分）</h3>
+    <div class="quote" style="font-size:26px;margin-bottom:24px;">
+      「コンビニの店員さんが笑顔だった」「天気がよかった」「ご飯がうまかった」
+    </div>
+    <div class="abox">
+      <p style="font-size:26px;color:#e2d4ff;line-height:1.7;">64件のRCTメタ分析で<span class="hl">ポジティブ感情の増加・不安の減少</span>が確認。<br>感謝を言語化した瞬間、脳内でセロトニンが分泌される。<br>1分で、化学的に気分が上がる。</p>
+    </div>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">43</span></div>
+</div>
+
+<!-- ===== 44. LEVEL 3 セルフカウンセリング ===== -->
+<div class="s">
+  <div class="glow glow-tr"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 6 ▶ LEVEL 3</div>
+    <h2 class="t-h2">セルフカウンセリング<br>「4STEPプロセス」</h2>
+    <p class="t-body" style="margin-bottom:24px;">行動がズレていないかを確認する、人生のPDCAだ。<br><span class="hl">週1回でもいい。</span>定期的に回すことで、戦略が精度を上げ続ける。</p>
+    <div class="badge-row">
+      <div class="badge">STEP 1｜願望明確化</div>
+      <div class="badge">STEP 2｜現状把握</div>
+      <div class="badge">STEP 3｜一致評価</div>
+      <div class="badge">STEP 4｜ネクストアクション</div>
+    </div>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">44</span></div>
+</div>
+
+<!-- ===== 45. 4STEP 1&2 ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 6 ▶ LEVEL 3 ▶ 4STEP</div>
+    <div class="cols">
+      <div class="col-box">
+        <p class="col-box-label">STEP 1｜願望明確化</p>
+        <p style="font-size:26px;font-weight:700;color:#e2d4ff;margin-bottom:12px;">「俺は本当はどうなりたいのか？」</p>
+        <p style="font-size:22px;color:#9080b0;line-height:1.7;">3レイヤーで深掘りする</p>
+      </div>
+      <div class="col-box">
+        <p class="col-box-label">STEP 2｜現状把握</p>
+        <p style="font-size:26px;font-weight:700;color:#e2d4ff;margin-bottom:12px;">「そのために今、何をしているか？」</p>
+        <p style="font-size:22px;color:#9080b0;line-height:1.7;"><span class="hl">正直に。言い訳なしで。</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">45</span></div>
+</div>
+
+<!-- ===== 46. 4STEP 3&4 ===== -->
+<div class="s">
+  <div class="glow glow-tr"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 6 ▶ LEVEL 3 ▶ 4STEP</div>
+    <div class="cols">
+      <div class="col-box">
+        <p class="col-box-label">STEP 3｜一致評価</p>
+        <p style="font-size:26px;font-weight:700;color:#e2d4ff;margin-bottom:12px;">「その行動は、目標に本当につながっているか？」</p>
+        <p style="font-size:22px;color:#9080b0;line-height:1.7;">ズレに気づくだけで変わる</p>
+      </div>
+      <div class="col-box" style="border-color:rgba(147,51,234,.4);">
+        <p class="col-box-label">STEP 4｜ネクストアクション</p>
+        <p style="font-size:26px;font-weight:700;color:#e2d4ff;margin-bottom:12px;">「変えられる一手は何か？」</p>
+        <p style="font-size:22px;color:#fde68a;line-height:1.7;font-weight:700;">小さくていい。1つだけ決める。</p>
+      </div>
+    </div>
+    <p class="t-body-sm" style="margin-top:24px;text-align:center;">このサイクルを回し続ける人間が、5年後に<span class="hl">「別人」</span>になっている。</p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">46</span></div>
+</div>
+
+<!-- ===== 47. LEVEL 4 悪習慣 ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 6 ▶ LEVEL 4</div>
+    <h2 class="t-h2">スマホ依存・悪習慣の<br>「見直し」法</h2>
+    <p class="t-body">悪習慣も、ジャーナルで見直せる。<br>まず<span class="hl">「トリガー記録」</span>から始めよう。</p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">47</span></div>
+</div>
+
+<!-- ===== 48. トリガー記録 ===== -->
+<div class="s">
+  <div class="glow glow-tr"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 6 ▶ LEVEL 4</div>
+    <h3 class="t-h3">トリガー記録</h3>
+    <p class="t-body" style="margin-bottom:24px;">スマホをいじりたくなった瞬間に、ノートに書く。</p>
+    <div class="quote" style="font-size:24px;line-height:2;margin-bottom:24px;">
+      <p>「19時、仕事が終わった直後。なんとなく手が伸びた」</p>
+      <p>「不安な気持ちの時に、現実逃避でSNSを開いた」</p>
+    </div>
+    <div class="abox">
+      <p style="font-size:28px;font-weight:700;color:#fde68a;">パターンが見えると、対策が打てる。</p>
+    </div>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">48</span></div>
+</div>
+
+<!-- ===== 49. ABCD反論法 ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 6 ▶ LEVEL 4</div>
+    <h3 class="t-h3">ABCD反論法</h3>
+    <ul class="nlist" style="gap:10px;">
+      <li><div class="nn" style="width:36px;height:36px;font-size:16px;">A</div><div><span style="font-size:20px;color:#9080b0;">出来事：</span><span style="font-size:22px;color:#c4c4de;">仕事が終わった</span></div></li>
+      <li><div class="nn" style="width:36px;height:36px;font-size:16px;">B</div><div><span style="font-size:20px;color:#9080b0;">歪んだ思考：</span><span style="font-size:22px;color:#c4c4de;">「5分だけなら見ても大丈夫」</span></div></li>
+      <li><div class="nn" style="width:36px;height:36px;font-size:16px;">C</div><div><span style="font-size:20px;color:#9080b0;">結果：</span><span style="font-size:22px;color:#c4c4de;">1時間溶けた</span></div></li>
+      <li><div class="nn" style="width:36px;height:36px;font-size:16px;">D</div><div><span style="font-size:20px;color:#9080b0;">反論：</span><span style="font-size:22px;color:#fde68a;font-weight:700;">「過去に5分で終わったことがあるか？」→「ない」</span></div></li>
+      <li><div class="nn" style="width:36px;height:36px;font-size:16px;">E</div><div><span style="font-size:20px;color:#9080b0;">代替行動：</span><span style="font-size:22px;color:#c084fc;">スマホを別の部屋に置き、代わりにノートを開く</span></div></li>
+    </ul>
+    <p class="t-body-sm" style="margin-top:20px;"><span class="hl">感情で動くのではなく、設計で動く。</span>それが習慣化の核心だ。</p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">49</span></div>
+</div>
+
+<!-- ===== 50. STAGE 7 OPENER ===== -->
+<div class="s s-chapter">
+  <div class="glow glow-c"></div>
+  <div class="cx cx-tl"></div><div class="cx cx-tr"></div><div class="cx cx-bl"></div><div class="cx cx-br"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 7</div>
+    <h1 class="t-h1">なぜ「アナログ（紙）」<br>なのか</h1>
+    <p class="t-body-md">研究が証明する手書きの圧倒的優位性</p>
+  </div>
+  <div class="ghost-num">7</div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">50</span></div>
+</div>
+
+<!-- ===== 51. スマホ集中破壊マシン ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 7</div>
+    <h3 class="t-h3">スマホという「集中破壊マシン」</h3>
+    <p class="t-body" style="margin-bottom:28px;">スマホを開いた瞬間、集中は終わる。<br>通知、SNS、ニュース——これらはすべて<span class="hl2">「あなたの注意を奪う」ように設計されている。</span></p>
+    <div class="abox">
+      <p style="font-size:28px;font-weight:700;color:#fde68a;line-height:1.7;">何兆円もの投資と数千人の天才エンジニアが<br>作り上げたシステムに、<br>意志の力で勝とうとするな。<br><span class="hl2">戦略的に「戦場から離れる」のが正解だ。</span></p>
+    </div>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">51</span></div>
+</div>
+
+<!-- ===== 52. 手書きの科学 ===== -->
+<div class="s">
+  <div class="glow glow-tr"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 7</div>
+    <h3 class="t-h3">手書きが脳に与える科学的な差</h3>
+    <div class="cols">
+      <div class="col-box" style="border-color:rgba(147,51,234,.4);">
+        <p class="col-box-label">手書きの時</p>
+        <ul class="blist sm">
+          <li>脳全体が広範囲に活性化</li>
+          <li>アルファ波・シータ波が活発</li>
+          <li>視覚・触覚・聴覚が同時に刺激</li>
+        </ul>
+      </div>
+      <div class="col-box">
+        <p class="col-box-label">タイピングの時</p>
+        <ul class="blist sm" style="color:#6040a0;">
+          <li style="color:#6040a0;">活性化する脳の領域が大幅に小さい</li>
+          <li style="color:#6040a0;">アルファ波・シータ波は不活発</li>
+        </ul>
+      </div>
+    </div>
+    <p class="t-body-sm" style="margin-top:20px;">手書きで学んだグループはタイピングより<span class="hl">早く・確実に記憶に定着</span>した。（ノルウェー科学技術大学等の研究）</p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">52</span></div>
+</div>
+
+<!-- ===== 53. STAGE7 結論 ===== -->
+<div class="s">
+  <div class="glow glow-c"></div>
+  <div class="sc" style="align-items:center;text-align:center;">
+    <div class="t-stage" style="justify-content:center;">STAGE 7 結論</div>
+    <p class="fq-text"><span class="hl">「紙とペン」は非効率ではない。<br>脳科学が証明した<br>最強の思考ツールだ。</span></p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">53</span></div>
+</div>
+
+<!-- ===== 54. STAGE 8 OPENER ===== -->
+<div class="s s-chapter">
+  <div class="glow glow-c"></div>
+  <div class="cx cx-tl"></div><div class="cx cx-tr"></div><div class="cx cx-bl"></div><div class="cx cx-br"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 8</div>
+    <h1 class="t-h1">継続の技術</h1>
+    <p class="t-body-md">「続かない」を仕組みで解決する</p>
+  </div>
+  <div class="ghost-num">8</div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">54</span></div>
+</div>
+
+<!-- ===== 55. 設計の問題 ===== -->
+<div class="s">
+  <div class="glow glow-c"></div>
+  <div class="sc" style="align-items:center;text-align:center;">
+    <div class="t-stage" style="justify-content:center;">STAGE 8</div>
+    <p class="fq-text">「続かない」のは<br>意志が弱いからではない。<br><br><span class="hl">設計が間違っているだけだ。</span></p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">55</span></div>
+</div>
+
+<!-- ===== 56. 法則1 ハードル ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 8 ▶ 法則1</div>
+    <h3 class="t-h3">ハードルを「地面スレスレ」に設定する</h3>
+    <div class="abox" style="margin-bottom:28px;text-align:center;">
+      <p style="font-size:34px;font-weight:900;color:#fde68a;">「1日1行、眠くても『眠い』とだけ書けばOK」</p>
+    </div>
+    <p class="t-body-md">完璧主義は最大の敵だ。<br>「今日は10分書けなかった」→「もういいや」——このループが習慣を殺す。</p>
+    <p class="t-body-sm" style="margin-top:16px;">地面スレスレのハードルは、「失敗」が物理的に不可能な高さだ。<br>脳が「<span class="hl3">これは自分にできること</span>」と認識し始める。</p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">56</span></div>
+</div>
+
+<!-- ===== 57. 法則2 2日連続 ===== -->
+<div class="s">
+  <div class="glow glow-tr"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 8 ▶ 法則2</div>
+    <h3 class="t-h3">2日連続で休まない</h3>
+    <p class="t-body" style="margin-bottom:28px;">1日サボっても、自分を責めるな。<br>ただし、<span class="hl">翌日は必ず戻ってくる。</span></p>
+    <div class="abox">
+      <p style="font-size:28px;color:#e2d4ff;line-height:1.7;">ゲームのように「ロードして再開」すればいい。<br><span class="hl">習慣化において最も重要なスキルは「再開する力」だ。</span></p>
+    </div>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">57</span></div>
+</div>
+
+<!-- ===== 58. 法則3 If-Then ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 8 ▶ 法則3</div>
+    <h3 class="t-h3">If-Thenプランニング（既存の行動とセットにする）</h3>
+    <div class="quote" style="font-size:26px;line-height:2.1;margin-bottom:24px;">
+      <p>「コーヒーを淹れたら → ノートを開く」</p>
+      <p>「寝る前の歯磨きが終わったら → 明日の最優先事項を書く」</p>
+    </div>
+    <div class="abox">
+      <p style="font-size:28px;font-weight:700;color:#fde68a;">新しい習慣を「ゼロから作る」より、<br>すでにある行動に「くっつける」方が<span class="hl2">10倍続く。</span></p>
+    </div>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">58</span></div>
+</div>
+
+<!-- ===== 59. 法則4 スコア ===== -->
+<div class="s">
+  <div class="glow glow-tr"></div>
+  <div class="sc">
+    <div class="t-stage">STAGE 8 ▶ 法則4</div>
+    <h3 class="t-h3">ゲーム感覚でスコアをつける</h3>
+    <p class="t-body" style="margin-bottom:28px;">毎日ノートの端に「本日の達成度：★★★☆☆」などとつけてみる。</p>
+    <div class="abox">
+      <p style="font-size:28px;color:#e2d4ff;line-height:1.7;">点数をつけることで、ゲームのスコア管理のように客観視できる。<br><span class="hl">進捗が見えると、続けること自体が楽しくなる。</span></p>
+    </div>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">59</span></div>
+</div>
+
+<!-- ===== 60. FINAL STAGE OPENER ===== -->
+<div class="s s-chapter">
+  <div class="glow glow-c"></div>
+  <div class="cx cx-tl"></div><div class="cx cx-tr"></div><div class="cx cx-bl"></div><div class="cx cx-br"></div>
+  <div class="sc">
+    <div class="t-stage">FINAL STAGE</div>
+    <h1 class="t-h1">今日から始める<br>「最初の一手」</h1>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">60</span></div>
+</div>
+
+<!-- ===== 61. 今日やること ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">FINAL STAGE</div>
+    <h2 class="t-h2">今日やること（3つだけ）</h2>
+    <ul class="nlist" style="gap:20px;">
+      <li><div class="nn">1</div><div><span class="hl">ノートとペンを買う</span><br><span class="t-body-sm">100円のものでいい。むしろそれがいい。</span></div></li>
+      <li><div class="nn">2</div><div><span class="hl">明日の朝、ノートを開く</span><br><span class="t-body-sm">起きたらすぐ手の届く場所に置いておく。書く内容は1つだけ：「今の気持ち」</span></div></li>
+      <li><div class="nn">3</div><div><span class="hl">最初の1ページに、今日の日付と一言を書く</span><br><span class="t-body-sm">「今日から始める」——それだけでいい。</span></div></li>
+    </ul>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">61</span></div>
+</div>
+
+<!-- ===== 62. 1週間チャレンジ ===== -->
+<div class="s">
+  <div class="glow glow-tr"></div>
+  <div class="sc">
+    <div class="t-stage">FINAL STAGE</div>
+    <h2 class="t-h2">1週間後のチャレンジ</h2>
+    <p class="t-body" style="margin-bottom:24px;">毎朝3つのことを書く習慣に挑戦する。</p>
+    <div class="step-r"><div class="step-n">①</div><div class="step-c"><div class="step-t">今の気持ち（感情デトックス）</div></div></div>
+    <div class="step-r"><div class="step-n">②</div><div class="step-c"><div class="step-t">昨日の自分を褒める一言（自己承認）</div></div></div>
+    <div class="step-r"><div class="step-n">③</div><div class="step-c"><div class="step-t">理想の自分を現在進行形で一文（ビジョン設定）</div></div></div>
+    <p class="t-body-sm" style="margin-top:20px;text-align:center;"><span class="hl">これだけで、脳のOSは更新され始める。</span></p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">62</span></div>
+</div>
+
+<!-- ===== 63. 1ヶ月後のゴール ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">FINAL STAGE</div>
+    <h2 class="t-h2">1ヶ月後のゴール</h2>
+    <p class="t-body" style="margin-bottom:24px;">セルフカウンセリング4STEPを<span class="hl">週1回</span>実施する。</p>
+    <div class="step-r"><div class="step-n">1</div><div class="step-c"><div class="step-t">本当はどうなりたいか？</div></div></div>
+    <div class="step-r"><div class="step-n">2</div><div class="step-c"><div class="step-t">今の行動は？</div></div></div>
+    <div class="step-r"><div class="step-n">3</div><div class="step-c"><div class="step-t">一致しているか？</div></div></div>
+    <div class="step-r"><div class="step-n">4</div><div class="step-c"><div class="step-t">明日からの一手は？</div></div></div>
+    <p class="t-body-sm" style="margin-top:16px;text-align:center;">これを4週間続けた人間は、確実に<span class="hl">「別人の思考」</span>を持ち始めている。</p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">63</span></div>
+</div>
+
+<!-- ===== 64. まとめ ===== -->
+<div class="s">
+  <div class="glow glow-c"></div>
+  <div class="sc" style="align-items:center;text-align:center;">
+    <div class="t-stage" style="justify-content:center;">まとめ</div>
+    <p class="fq-text">人生を大きく変えるのは、<br>ドラマチックな一発逆転ではない。<br><br><span class="hl">毎日の「1行の積み立て貯金」だ。</span></p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">64</span></div>
+</div>
+
+<!-- ===== 65. 締めのメッセージ ===== -->
+<div class="s s-chapter">
+  <div class="glow glow-c"></div>
+  <div class="cx cx-tl"></div><div class="cx cx-tr"></div><div class="cx cx-bl"></div><div class="cx cx-br"></div>
+  <div class="sc" style="align-items:center;text-align:center;">
+    <div class="rline" style="width:300px;margin:0 auto 32px;"></div>
+    <p style="font-size:40px;font-weight:700;color:#e2d4ff;line-height:1.8;letter-spacing:2px;">「難しくない。やるかやらないか、それだけだ。<br><span class="hl">さあ、ノートを開け。<br>お前の人生の続きを書き始めろ。」</span></p>
+    <div class="rline" style="width:300px;margin:32px auto 0;"></div>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">65</span></div>
+</div>
+
+<!-- ===== 66. APPENDIX A OPENER ===== -->
+<div class="s s-chapter">
+  <div class="glow glow-c"></div>
+  <div class="cx cx-tl"></div><div class="cx cx-tr"></div><div class="cx cx-bl"></div><div class="cx cx-br"></div>
+  <div class="sc">
+    <div class="t-stage">APPENDIX A</div>
+    <h1 class="t-h1">よくある疑問<br>Q&A</h1>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">66</span></div>
+</div>
+
+<!-- ===== 67. Q&A 1-2 ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">APPENDIX A</div>
+    <div style="display:flex;flex-direction:column;gap:28px;">
+      <div class="col-box">
+        <p style="font-size:24px;font-weight:700;color:#fde68a;margin-bottom:10px;">Q. 書く内容がわからない時はどうする？</p>
+        <p style="font-size:22px;color:#c4c4de;line-height:1.7;">A. 「書く内容がわからない」とそのまま書け。その一文が、今日のジャーナルだ。</p>
+      </div>
+      <div class="col-box">
+        <p style="font-size:24px;font-weight:700;color:#fde68a;margin-bottom:10px;">Q. 毎日必ず書かないといけないか？</p>
+        <p style="font-size:22px;color:#c4c4de;line-height:1.7;">A. 必ずではない。ただし、<span class="hl">2日連続で空白にするな。</span>翌日は必ず戻ってこい。</p>
+      </div>
+    </div>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">67</span></div>
+</div>
+
+<!-- ===== 68. Q&A 3-4 ===== -->
+<div class="s">
+  <div class="glow glow-tr"></div>
+  <div class="sc">
+    <div class="t-stage">APPENDIX A</div>
+    <div style="display:flex;flex-direction:column;gap:28px;">
+      <div class="col-box">
+        <p style="font-size:24px;font-weight:700;color:#fde68a;margin-bottom:10px;">Q. 書いたものは読み返すべきか？</p>
+        <p style="font-size:22px;color:#c4c4de;line-height:1.7;">A. 義務ではないが、<span class="hl">月に一度振り返ると「自分の成長」が見える。</span>モチベーションになる。</p>
+      </div>
+      <div class="col-box">
+        <p style="font-size:24px;font-weight:700;color:#fde68a;margin-bottom:10px;">Q. ネガティブなことを書いていいか？</p>
+        <p style="font-size:22px;color:#c4c4de;line-height:1.7;">A. <span class="hl">むしろ積極的に書け。</span>本音を書かないジャーナルは、脳の深い部分に届かない。</p>
+      </div>
+    </div>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">68</span></div>
+</div>
+
+<!-- ===== 69. Q&A 5-6 ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">APPENDIX A</div>
+    <div style="display:flex;flex-direction:column;gap:28px;">
+      <div class="col-box">
+        <p style="font-size:24px;font-weight:700;color:#fde68a;margin-bottom:10px;">Q. どんなノートが良いか？</p>
+        <p style="font-size:22px;color:#c4c4de;line-height:1.7;">A. 最初は100円で十分。続いてきたら、少し良いノートに変えろ。それがモチベーションになる。</p>
+      </div>
+      <div class="col-box">
+        <p style="font-size:24px;font-weight:700;color:#fde68a;margin-bottom:10px;">Q. どのくらいで変化を感じられるか？</p>
+        <p style="font-size:22px;color:#c4c4de;line-height:1.7;">A. <span class="hl">2週間で「思考の整理がうまくなった」、1ヶ月で「行動が変わった」</span>と気づく人が多い。</p>
+      </div>
+    </div>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">69</span></div>
+</div>
+
+<!-- ===== 70. Q&A 7-8 ===== -->
+<div class="s">
+  <div class="glow glow-tr"></div>
+  <div class="sc">
+    <div class="t-stage">APPENDIX A</div>
+    <div style="display:flex;flex-direction:column;gap:28px;">
+      <div class="col-box">
+        <p style="font-size:24px;font-weight:700;color:#fde68a;margin-bottom:10px;">Q. 朝と夜、どちらが効果的か？</p>
+        <p style="font-size:22px;color:#c4c4de;line-height:1.7;">A. 目的が違う。<span class="hl">朝は「1日の方向設定」、夜は「脳のリセットと睡眠準備」。</span>まずは朝から始めろ。</p>
+      </div>
+      <div class="col-box">
+        <p style="font-size:24px;font-weight:700;color:#fde68a;margin-bottom:10px;">Q. 思考が広がりすぎて止まらない時は？</p>
+        <p style="font-size:22px;color:#c4c4de;line-height:1.7;">A. <span class="hl">タイマーを5分にセットして書く。</span>時間制限が集中力を生む。</p>
+      </div>
+    </div>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">70</span></div>
+</div>
+
+<!-- ===== 71. APPENDIX B OPENER ===== -->
+<div class="s s-chapter">
+  <div class="glow glow-c"></div>
+  <div class="cx cx-tl"></div><div class="cx cx-tr"></div><div class="cx cx-bl"></div><div class="cx cx-br"></div>
+  <div class="sc">
+    <div class="t-stage">APPENDIX B</div>
+    <h1 class="t-h1">書くネタに詰まったら</h1>
+    <p class="t-body-md">ジャーナルプロンプト集</p>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">71</span></div>
+</div>
+
+<!-- ===== 72. プロンプト 自分軸 ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">APPENDIX B</div>
+    <h3 class="t-h3">自分軸を整える問い</h3>
+    <ul class="blist sm" style="gap:14px;">
+      <li>今の自分の「本当の気持ち」は何か？</li>
+      <li>最近、心の底から楽しいと感じた瞬間はいつか？</li>
+      <li>5年後、どんな1日を過ごしていたいか？具体的に描け。</li>
+      <li>自分が大切にしている価値観を3つ挙げるとしたら？</li>
+      <li>「本当はこうしたい」と思いながら、できていないことは何か？</li>
+    </ul>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">72</span></div>
+</div>
+
+<!-- ===== 73. プロンプト 目標・行動 ===== -->
+<div class="s">
+  <div class="glow glow-tr"></div>
+  <div class="sc">
+    <div class="t-stage">APPENDIX B</div>
+    <h3 class="t-h3">目標・行動を前進させる問い</h3>
+    <ul class="blist sm" style="gap:14px;">
+      <li>今週、自分が胸を張れる行動は何か？</li>
+      <li>今の習慣のうち、捨てるべきものは何か？</li>
+      <li>今月の最優先目標を1つ挙げるとしたら何か？</li>
+      <li>もし失敗しないとわかっていたら、何に挑戦するか？</li>
+      <li>1年前の自分に今の自分を見せたら、何と言うか？</li>
+    </ul>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">73</span></div>
+</div>
+
+<!-- ===== 74. プロンプト 収入・仕事 ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">APPENDIX B</div>
+    <h3 class="t-h3">収入・仕事・副業の問い</h3>
+    <ul class="blist sm" style="gap:14px;">
+      <li>今の仕事で得ている最大の価値は何か？</li>
+      <li>副業・収入アップのために、今週試せる小さな実験は？</li>
+      <li>自分の「強み」を3つ書け。それは仕事でどう使えるか？</li>
+      <li>もし今の収入が2倍になったら、何が変わるか？</li>
+      <li>お金に対して「怖い」と感じることは何か？その根拠はあるか？</li>
+    </ul>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">74</span></div>
+</div>
+
+<!-- ===== 75. プロンプト 体・健康 ===== -->
+<div class="s">
+  <div class="glow glow-tr"></div>
+  <div class="sc">
+    <div class="t-stage">APPENDIX B</div>
+    <h3 class="t-h3">体・見た目・健康の問い</h3>
+    <ul class="blist sm" style="gap:14px;">
+      <li>理想の体になった自分は、毎日何をしているか？</li>
+      <li>今の食習慣・運動習慣で、続けたいものと変えたいものは？</li>
+      <li>筋トレや健康習慣を続けられない時、何がトリガーになっているか？</li>
+      <li>自分の体に対して、今感謝できることは何か？</li>
+    </ul>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">75</span></div>
+</div>
+
+<!-- ===== 76. プロンプト 人間関係 ===== -->
+<div class="s">
+  <div class="glow glow-tl"></div>
+  <div class="sc">
+    <div class="t-stage">APPENDIX B</div>
+    <h3 class="t-h3">人間関係・コミュニケーションの問い</h3>
+    <ul class="blist sm" style="gap:14px;">
+      <li>最近、誰かから感謝された瞬間はあるか？</li>
+      <li>自分が「魅力的だな」と感じる人はどんな人か？共通点は？</li>
+      <li>今の自分が磨くべき「人間力」は何か？</li>
+      <li>最近、自分から連絡を取っていない大切な人は誰か？</li>
+    </ul>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">76</span></div>
+</div>
+
+<!-- ===== 77. プロンプト マインドセット ===== -->
+<div class="s">
+  <div class="glow glow-tr"></div>
+  <div class="sc">
+    <div class="t-stage">APPENDIX B</div>
+    <h3 class="t-h3">マインドセット・メンタルの問い</h3>
+    <ul class="blist sm" style="gap:14px;">
+      <li>今、自分の思考を占領している「心配事」は何か？書き出して客観視しろ。</li>
+      <li>その心配が「現実になる確率」は何%か？根拠は？</li>
+      <li>最近、自分が「他責」になっていた場面はあるか？本当は何ができたか？</li>
+      <li>今日、1つだけ「挑戦」するとしたら何か？</li>
+    </ul>
+  </div>
+  <div class="sf"><span class="sf-title">ジャーナル完全攻略ガイド</span><span class="sf-page">77</span></div>
+</div>
+
+</body>
+</html>
