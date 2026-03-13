@@ -68,8 +68,9 @@ body{font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Yu Gothic UI','Not
 .fq-text{font-size:46px;font-weight:700;color:#e2d4ff;line-height:1.65;letter-spacing:1px;max-width:1100px;}
 .illust{position:absolute;right:40px;top:50%;transform:translateY(-50%);pointer-events:none;border-radius:16px;}
 .illust-center{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;border-radius:16px;}
-.illust-bg{position:absolute;right:0;top:0;width:100%;height:100%;object-fit:cover;pointer-events:none;opacity:.12;}
-.illust-side{position:absolute;right:60px;top:50%;transform:translateY(-50%);pointer-events:none;border-radius:16px;box-shadow:0 8px 32px rgba(109,40,217,.3);}
+.illust-bg{position:absolute;right:0;top:0;width:100%;height:100%;object-fit:cover;pointer-events:none;opacity:.08;mask-image:linear-gradient(to right,transparent 10%,rgba(0,0,0,.3) 40%,rgba(0,0,0,.5) 70%,rgba(0,0,0,.3) 100%);-webkit-mask-image:linear-gradient(to right,transparent 10%,rgba(0,0,0,.3) 40%,rgba(0,0,0,.5) 70%,rgba(0,0,0,.3) 100%);}
+.illust-side{position:absolute;right:40px;top:50%;transform:translateY(-50%);pointer-events:none;border-radius:16px;box-shadow:0 8px 32px rgba(109,40,217,.3);opacity:.55;}
+.has-illust .sc{padding-right:420px;}
 </style>
 </head>
 <body>
@@ -93,7 +94,7 @@ body{font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Yu Gothic UI','Not
 </div>
 
 <!-- ===== 2. はじめに ===== -->
-<div class="s">
+<div class="s has-illust">
   <div class="glow glow-tl"></div>
   <img src="images/thinking.png" class="illust-side" alt="" style="width:320px;opacity:.7;">
   <div class="sc">
@@ -105,7 +106,7 @@ body{font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Yu Gothic UI','Not
 </div>
 
 <!-- ===== 3. 3つの悩み ===== -->
-<div class="s">
+<div class="s has-illust">
   <div class="glow glow-tl"></div>
   <img src="images/thinking.png" class="illust-side" alt="" style="width:280px;opacity:.5;">
   <div class="sc">
@@ -131,9 +132,9 @@ body{font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Yu Gothic UI','Not
 </div>
 
 <!-- ===== 5. 攻略本 ===== -->
-<div class="s">
+<div class="s has-illust">
   <div class="glow glow-tl"></div>
-  <img src="images/game.png" class="illust-side" alt="" style="width:340px;opacity:.6;">
+  <img src="images/cover.png" class="illust-side" alt="" style="width:340px;opacity:.6;">
   <div class="sc">
     <div class="t-stage">はじめに</div>
     <h2 class="t-h2">その「攻略本」の役割を果たすのが</h2>
@@ -159,7 +160,7 @@ body{font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Yu Gothic UI','Not
 </div>
 
 <!-- ===== 7. ジャーナリングとは ===== -->
-<div class="s">
+<div class="s has-illust">
   <div class="glow glow-tl"></div>
   <img src="images/detox.png" class="illust-side" alt="" style="width:340px;opacity:.6;">
   <div class="sc">
@@ -198,7 +199,7 @@ body{font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Yu Gothic UI','Not
 </div>
 
 <!-- ===== 10. 根拠1 RAS ===== -->
-<div class="s">
+<div class="s has-illust">
   <div class="glow glow-tl"></div>
   <img src="images/brain.png" class="illust-side" alt="" style="width:380px;opacity:.65;">
   <div class="sc">
@@ -264,7 +265,7 @@ body{font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Yu Gothic UI','Not
 </div>
 
 <!-- ===== 14. 根拠5 ツァイガルニク ===== -->
-<div class="s">
+<div class="s has-illust">
   <div class="glow glow-tr"></div>
   <img src="images/brain.png" class="illust-side" alt="" style="width:340px;opacity:.5;">
   <div class="sc">
@@ -367,9 +368,9 @@ body{font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Yu Gothic UI','Not
 </div>
 
 <!-- ===== 21. 詰まりの2つの理由 ===== -->
-<div class="s">
+<div class="s has-illust">
   <div class="glow glow-tl"></div>
-  <img src="images/wall.png" class="illust-side" alt="" style="width:340px;opacity:.6;">
+  <img src="images/thinking.png" class="illust-side" alt="" style="width:340px;opacity:.6;">
   <div class="sc">
     <div class="t-stage">STAGE 3</div>
     <h2 class="t-h2">前に進めない理由は<br>だいたい2つに絞られる</h2>
@@ -382,7 +383,7 @@ body{font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Yu Gothic UI','Not
 </div>
 
 <!-- ===== 22. 他責思考 ===== -->
-<div class="s">
+<div class="s has-illust">
   <div class="glow glow-tr"></div>
   <img src="images/wall.png" class="illust-side" alt="" style="width:300px;opacity:.4;">
   <div class="sc">
@@ -399,7 +400,7 @@ body{font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Yu Gothic UI','Not
 </div>
 
 <!-- ===== 23. 自責スイッチ ===== -->
-<div class="s">
+<div class="s has-illust">
   <div class="glow glow-tl"></div>
   <img src="images/wall.png" class="illust-side" alt="" style="width:280px;opacity:.35;">
   <div class="sc">
@@ -427,9 +428,9 @@ body{font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Yu Gothic UI','Not
 </div>
 
 <!-- ===== 25. 3ヶ月後 ===== -->
-<div class="s">
+<div class="s has-illust">
   <div class="glow glow-tl"></div>
-  <img src="images/morning.png" class="illust-side" alt="" style="width:340px;opacity:.5;">
+  <img src="images/start.png" class="illust-side" alt="" style="width:340px;opacity:.45;">
   <div class="sc">
     <div class="t-stage">STAGE 4</div>
     <h2 class="t-h2" style="color:#c084fc;">3ヶ月後のあなた</h2>
@@ -461,7 +462,6 @@ body{font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Yu Gothic UI','Not
 <!-- ===== 27. 1年後 ===== -->
 <div class="s">
   <div class="glow glow-c"></div>
-  <img src="images/morning.png" class="illust-side" alt="" style="width:300px;opacity:.4;">
   <div class="sc">
     <div class="t-stage">STAGE 4</div>
     <h2 class="t-h2" style="color:#fde68a;">1年後のあなた</h2>
@@ -487,7 +487,7 @@ body{font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Yu Gothic UI','Not
 </div>
 
 <!-- ===== 29. 3レイヤー概要 ===== -->
-<div class="s">
+<div class="s has-illust">
   <div class="glow glow-tl"></div>
   <img src="images/layers.png" class="illust-side" alt="" style="width:360px;opacity:.65;">
   <div class="sc">
@@ -579,9 +579,9 @@ body{font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Yu Gothic UI','Not
 </div>
 
 <!-- ===== 35. 用意するもの ===== -->
-<div class="s">
+<div class="s has-illust">
   <div class="glow glow-tl"></div>
-  <img src="images/morning.png" class="illust-side" alt="" style="width:320px;opacity:.45;">
+  <img src="images/cover.png" class="illust-side" alt="" style="width:320px;opacity:.45;">
   <div class="sc">
     <div class="t-stage">STAGE 6</div>
     <h2 class="t-h2">用意するもの</h2>
@@ -598,7 +598,7 @@ body{font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Yu Gothic UI','Not
 </div>
 
 <!-- ===== 36. LEVEL 1 朝ルーティン ===== -->
-<div class="s">
+<div class="s has-illust">
   <div class="glow glow-tr"></div>
   <img src="images/morning.png" class="illust-side" alt="" style="width:340px;opacity:.55;">
   <div class="sc">
@@ -613,7 +613,7 @@ body{font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Yu Gothic UI','Not
 </div>
 
 <!-- ===== 37. STEP1 感情デトックス ===== -->
-<div class="s">
+<div class="s has-illust">
   <div class="glow glow-tl"></div>
   <img src="images/detox.png" class="illust-side" alt="" style="width:320px;opacity:.5;">
   <div class="sc">
@@ -662,7 +662,7 @@ body{font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Yu Gothic UI','Not
 </div>
 
 <!-- ===== 40. LEVEL 2 夜ルーティン ===== -->
-<div class="s">
+<div class="s has-illust">
   <div class="glow glow-tr"></div>
   <img src="images/night.png" class="illust-side" alt="" style="width:360px;opacity:.6;">
   <div class="sc">
@@ -785,7 +785,7 @@ body{font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Yu Gothic UI','Not
 </div>
 
 <!-- ===== 47. LEVEL 4 悪習慣 ===== -->
-<div class="s">
+<div class="s has-illust">
   <div class="glow glow-tl"></div>
   <img src="images/phone.png" class="illust-side" alt="" style="width:340px;opacity:.55;">
   <div class="sc">
@@ -797,9 +797,9 @@ body{font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Yu Gothic UI','Not
 </div>
 
 <!-- ===== 48. トリガー記録 ===== -->
-<div class="s">
+<div class="s has-illust">
   <div class="glow glow-tr"></div>
-  <img src="images/phone.png" class="illust-side" alt="" style="width:300px;opacity:.4;">
+  <img src="images/detox.png" class="illust-side" alt="" style="width:300px;opacity:.4;">
   <div class="sc">
     <div class="t-stage">STAGE 6 ▶ LEVEL 4</div>
     <h3 class="t-h3">トリガー記録</h3>
@@ -847,7 +847,7 @@ body{font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Yu Gothic UI','Not
 </div>
 
 <!-- ===== 51. スマホ集中破壊マシン ===== -->
-<div class="s">
+<div class="s has-illust">
   <div class="glow glow-tl"></div>
   <img src="images/phone.png" class="illust-side" alt="" style="width:340px;opacity:.55;">
   <div class="sc">
@@ -862,7 +862,7 @@ body{font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Yu Gothic UI','Not
 </div>
 
 <!-- ===== 52. 手書きの科学 ===== -->
-<div class="s">
+<div class="s has-illust">
   <div class="glow glow-tr"></div>
   <img src="images/handwrite.png" class="illust-side" alt="" style="width:340px;opacity:.55;">
   <div class="sc">
@@ -924,7 +924,7 @@ body{font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Yu Gothic UI','Not
 </div>
 
 <!-- ===== 56. 法則1 ハードル ===== -->
-<div class="s">
+<div class="s has-illust">
   <div class="glow glow-tl"></div>
   <img src="images/hurdle.png" class="illust-side" alt="" style="width:340px;opacity:.55;">
   <div class="sc">
@@ -954,9 +954,9 @@ body{font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Yu Gothic UI','Not
 </div>
 
 <!-- ===== 58. 法則3 If-Then ===== -->
-<div class="s">
+<div class="s has-illust">
   <div class="glow glow-tl"></div>
-  <img src="images/hurdle.png" class="illust-side" alt="" style="width:300px;opacity:.4;">
+  <img src="images/checklist.png" class="illust-side" alt="" style="width:300px;opacity:.4;">
   <div class="sc">
     <div class="t-stage">STAGE 8 ▶ 法則3</div>
     <h3 class="t-h3">If-Thenプランニング（既存の行動とセットにする）</h3>
@@ -997,7 +997,7 @@ body{font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Yu Gothic UI','Not
 </div>
 
 <!-- ===== 61. 今日やること ===== -->
-<div class="s">
+<div class="s has-illust">
   <div class="glow glow-tl"></div>
   <img src="images/checklist.png" class="illust-side" alt="" style="width:340px;opacity:.6;">
   <div class="sc">
